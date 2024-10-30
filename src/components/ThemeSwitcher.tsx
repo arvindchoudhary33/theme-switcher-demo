@@ -7,7 +7,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { AppContext } from "../App";
-import { ThemeName, themeNames, themeLabels } from "../constants";
+import { ThemeName, THEME_NAMES, THEME_LABELS } from "../constants";
 
 const ThemeSwitcher = () => {
   const { theme, setTheme } = useContext(AppContext);
@@ -26,9 +26,9 @@ const ThemeSwitcher = () => {
         <SelectValue placeholder="Select a theme" />
       </SelectTrigger>
       <SelectContent aria-label="color theme selector">
-        {themeNames.map((themeName) => (
+        {THEME_NAMES.map((themeName) => (
           <SelectItem key={themeName} value={themeName}>
-            {themeLabels[themeName]}
+            {THEME_LABELS[themeName]}
           </SelectItem>
         ))}
       </SelectContent>
